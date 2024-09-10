@@ -1,16 +1,21 @@
+import Button from "./components/button/Button"
+import Layaut from "./components/layaut/Layaut"
 
 
 function App() {
 
   return (
     <>
-      <div className="bg-pink-300 min-h-screen">
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
+      <div className="bg-secondary">
+          <Button name= "ACERCA DE" />
+          <Button name= "SERVICIOS" />
+          <Button name= "GALERIA" />
+          <Button name= "CONTACTO" />
+          <Button name= "RESERVA ONLINE" />
+          <Layaut/>
       </div>
     </>
   )
 }
 
-export default App
+export default App;

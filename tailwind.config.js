@@ -9,7 +9,9 @@ export default {
   threme: {
     extend: {
       colors: {
-        'primary': '#5c059b',
+        'primary': "#1E293B",
+        'secondary': "#5c059b",
+        'accent': "#CB5930",
       },
     },
   },
