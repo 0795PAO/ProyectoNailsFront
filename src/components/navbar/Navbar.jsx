@@ -10,7 +10,7 @@ const Navbar = () => {
         <header className="w-full text-gray-600 body-font bg-primary shadow-md"> {/* Cambia bg-white a bg-pink-500 */}
             <div className="w-full flex flex-wrap p-5 flex-col md:flex-row items-center justify-between px-4">
                 <a href="/" className="flex items-center mb-4 md:mb-0">
-                    <img src="/public/imagenes/logo.png" alt="Rashel Nails & Spa Logo" className="w-10 h-10" />
+                    <img src="/public/imagenes/logoN.png" alt="Rashel Nails & Spa Logo" className="w-10 h-10" />
                     <span className="ml-3 text-xl font-semibold text-black">Rashel Nails & Spa</span>
                 </a>
                 <button className="inline-flex items-center md:hidden text-black" onClick={() => setIsOpen(!isOpen)}>

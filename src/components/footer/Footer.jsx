@@ -1,25 +1,56 @@
-
-import React from 'react';
+import { useState } from 'react';
 
 const Footer = () => {
     return (
-        <footer className="bg-primary p-2 w-full mt-auto">
-            <div className="container mx-auto flex flex-row items-center justify-between">
-                <a href="https://github.com/0795PAO/VoyageCraft_front" className="flex items-center text-white text-xs px-1 hover:bg-blue-700 rounded">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 mr-1">
-                        <path fillRule="evenodd" d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.87 8.15 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.61-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.02 1.53 1.02.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.1.63-1.35-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.02-2.68-.1-.25-.45-1.28.1-2.67 0 0 .84-.27 2.75 1.02A9.548 9.548 0 0112 7.29c.85.004 1.71.115 2.51.337 1.9-1.3 2.74-1.02 2.74-1.02.55 1.39.2 2.42.1 2.67.64.7 1.02 1.59 1.02 2.68 0 3.83-2.34 4.67-4.57 4.92.36.31.68.93.68 1.87v2.78c0 .27.18.58.69.48A9.985 9.985 0 0022 12c0-5.52-4.48-10-10-10z" clipRule="evenodd"
-                        />
-                    </svg>
-                    GitHub
+        <footer className="text-gray-600 body-font bg-primary py-8">
+            <div className="container mx-auto flex flex-col items-center justify-center">
+                {/* Logo y texto centralizados */}
+                <a href="/" className="flex flex-col items-center mb-4">
+                    <img src="/public/imagenes/logoN.png" alt="Rashel Nails & Spa Logo" className="w-16 h-16" />
+                    <span className="mt-2 text-xl font-semibold text-black">Rashel Nails & Spa</span>
                 </a>
-                <a href="#" className="text-white text-xs px-1 hover:bg-blue-700 rounded">Privacy</a>
-                <a href="#" className="text-white text-xs px-1 hover:bg-blue-700 rounded">Cookies</a>
-                <a href="#" className="text-white text-xs px-1 hover:bg-blue-700 rounded">Contact</a>
+                <div className="text-center text-black mb-4">
+                    <div className="flex items-center justify-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 2C8.13401 2 5 5.13401 5 9c0 7 7 13 7 13s7-6 7-13c0-3.866-3.134-7-7-7z" />
+                        </svg>
+                        <p>Ubicado en A Coruña</p>
+                    </div>
+                    <div className="flex items-center justify-center mb-2">
+                        <p>Agra de Orzán 34 bajo 15010</p>
+                    </div>
+                    <div className="flex items-center justify-center mb-2">
+                        <p>Horario: Lu-Vi 9:30 am-7:00 pm Sab: 9:30 am-5:00 pm</p>
+                    </div>
+                    <div className="flex items-center justify-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10a1 1 0 011-1h16a1 1 0 011 1v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4zM12 21a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                        <p>+34 681 00 00 12</p>
+                    </div>
+                    <div className="flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 12v5m-4 4h8a1 1 0 001-1v-6m-10 7H4a1 1 0 01-1-1V8a1 1 0 011-1h8M5 8h2m4 0h2m-6 4h6" />
+                        </svg>
+                        <p>Correo electrónico: <a href="mailto:Rlisbehtb23@gmail.com" className="underline">Rlisbehtb23@gmail.com</a></p>
+                    </div>
+                </div>
+                <div className="flex space-x-6">
+                    <a href="https://www.facebook.com/profile.php?id=61552162506459" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black">
+                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/rashelstudionails?igsh=MTl4a3U0NGViMnMydQ%3D%3D" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-black">
+                        <svg fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </footer>
     );
-};
-
-
+}
 
 export default Footer;
