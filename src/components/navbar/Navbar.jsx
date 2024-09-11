@@ -21,8 +21,7 @@ const Navbar = () => {
                     <a className={btnLink}>GALERIA</a>
                     <a className={btnLink}>CONTACTO</a>
                     <a className={btnLink}>OFERTA DEL MES</a>
-                    <a className={btnLink}>RESERVAR</a>
-                    <a className={btnLink}>SUSCRIBIRSE</a>
+                    <a className={btnLink}>RESERVAR ONLINE</a>
                 </nav>
             </div>
         </header>

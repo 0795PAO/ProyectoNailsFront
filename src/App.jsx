@@ -1,26 +1,28 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Button from "./components/button/Button";
+import { Route, Routes } from "react-router-dom";
 import Layaut from "./components/layaut/Layaut";
 import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/Home";
+import Servicios from "./pages/Servicios";
+import Galeria from "./pages/Galeria";
+import Contacto from "./pages/Contacto";
+import Ofertadelmes from "./pages/Ofertadelmes";
+import Reservaonline from "./pages/Reservaronline";
+
 
 function App() {
   return (
     <>
-      <div 
-        className="bg-secondary min-h-screen flex flex-col bg-no-repeat bg-center" 
-        style={{ 
-          backgroundImage: "url('/public/imagenes/logo.png')", // Ruta de la imagen de fondo
-          backgroundSize: "contain", // Asegura que el logo se muestre completo
-          backgroundColor: "pink" // Agrega un color de fondo para que el logo sea visible
-        }}
-      >
+      <div className="bg-secondary min-h-screen flex flex-col bg-no-repeat bg-center" style={{backgroundColor: "pink"}}>
         <Navbar />
         <Layaut>
-          <BrowserRouter>
             <Routes>
-              <Route path="/"></Route>
+              <Route path='/' element={<Home></Home>}></Route>
+              <Route path='/Servicios' element={<Servicios></Servicios>}></Route>
+              <Route path='/Galeria' element={<Galeria></Galeria>}></Route>
+              <Route path='/Contacto' element={<Contacto></Contacto>}></Route>
+              <Route path='/Ofertadelmes' element={<Ofertadelmes></Ofertadelmes>}></Route>
+              <Route path='/Reservaronline' element={<Reservaonline></Reservaonline>}></Route>
             </Routes>
-          </BrowserRouter>
         </Layaut>
       </div>
     </>
