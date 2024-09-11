@@ -7,7 +7,7 @@ const Reservaronline = () => {
         telefono: "",
         fecha: "",
         hora: "",
-        servicio: "",  // Nuevo estado para el servicio seleccionado
+        servicio: "",
         privacidad: false,
     });
 
@@ -24,7 +24,26 @@ const Reservaronline = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Formulario enviado:", formData);
+        // Cambiar el estado para mostrar el mensaje de éxito
+        setIsFormSubmitted(true);
+
+        // Cerrar el modal después del envío
         setIsModalOpen(false);
+
+        // Reiniciar el formulario
+        setFormData({
+            nombre: "",
+            telefono: "",
+            fecha: "",
+            hora: "",
+            servicio: "",
+            privacidad: false,
+        });
+
+        // Ocultar el mensaje de éxito después de 3 segundos
+        setTimeout(() => {
+            setIsFormSubmitted(false);
+        }, 3000);
     };
 
     return (
@@ -34,10 +53,11 @@ const Reservaronline = () => {
                     <span className="animate-pulse">RESERVA ONLINE</span>
                 </button>
             </div>
+
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-                        <button onClick={() => setIsModalOpen(false)} className="text-gray-500 float-right"> &times;</button>
+                        <button onClick={() => setIsModalOpen(false)} className="text-gray-500 float-right">&times;</button>
                         <h2 className="text-xl font-bold mb-4 text-center">RASHEL NAILS & SPA</h2>
                         <form onSubmit={handleSubmit}>
                             <div className="mb-4">
@@ -63,7 +83,6 @@ const Reservaronline = () => {
                                 />
                             </div>
 
-                           
                             <div className="mb-4">
                                 <label className="block text-gray-700">¿Qué servicio deseas? *</label>
                                 <select
@@ -78,7 +97,7 @@ const Reservaronline = () => {
                                     <option value="Limpieza Facial">Limpieza Facial</option>
                                     <option value="Pestañas">Pestañas</option>
                                     <option value="Cejas">Cejas</option>
-                                    <option value="Depilaciòn con Cera">Depilaciòn con Cera</option>
+                                    <option value="Depilación con Cera">Depilación con Cera</option>
                                 </select>
                             </div>
 
@@ -127,7 +146,7 @@ const Reservaronline = () => {
                                     Acepto la política de privacidad *
                                 </label>
                             </div>
-                            <div className="flex justify-center">
+                            <div className="flex justify-center mt-2">
                                 <button className="bg-pink-500 text-black mt-12 px-10 py-2 w-64 rounded font-bold">
                                     <span className="animate-pulse">RESERVAR</span>
                                 </button>
@@ -136,14 +155,15 @@ const Reservaronline = () => {
                     </div>
                 </div>
             )}
+
+            {/* Mostrar mensaje de éxito */}
             {isFormSubmitted && (
-                <div className="mt-4 text-green-600">
+                <div className="mt-4 text-black text-center">
                     El formulario se ha enviado correctamente.
                 </div>
             )}
         </div>
     );
 };
-
 
 export default Reservaronline;

@@ -7,7 +7,7 @@ const Navbar = () => {
     const activeLink = 'block py-2 text-black hover:text-accent cursor-pointer mr-4';
 
     return (
-        <header className="w-full text-gray-600 body-font bg-primary shadow-md">
+        <nav className="w-full text-gray-600 body-font bg-primary shadow-md text-2xl font-semibold">
             <div className="w-full flex flex-wrap p-5 flex-col md:flex-row items-center justify-between px-4">
                 <a href="/" className="flex items-center mb-4 md:mb-0">
                     <img src="/public/imagenes/logoN.png" alt="Rashel Nails & Spa Logo" className="w-10 h-10" />
@@ -26,7 +26,7 @@ const Navbar = () => {
                     <NavLink to="Reservar" className={({isActive}) => isActive ? activeLink : btnLink}>RESERVAR</NavLink>
                 </nav>
             </div>
-        </header>
+        </nav>
     );
 }
 

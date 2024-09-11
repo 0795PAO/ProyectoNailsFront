@@ -1,10 +1,8 @@
-import { useState } from 'react';
 
 const Footer = () => {
     return (
-        <footer className="text-gray-600 body-font bg-primary py-8">
-            <div className="container mx-auto flex flex-col items-center justify-center">
-                {/* Logo y texto centralizados */}
+        <footer className="text-gray-600 body-font bg-primary py-1">
+            <div className="container mx-auto flex flex-col mt-2 items-center justify-center">
                 <a href="/" className="flex flex-col items-center mb-4">
                     <img src="/public/imagenes/logoN.png" alt="Rashel Nails & Spa Logo" className="w-16 mt-1 h-16" />
                     <span className="text-xl font-semibold text-black">Rashel Nails & Spa</span>
