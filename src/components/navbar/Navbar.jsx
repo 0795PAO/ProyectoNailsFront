@@ -1,10 +1,13 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const btnLink = 'block py-2 text-black hover:text-accent cursor-pointer mr-4';
+    const activeLink = 'block py-2 text-black hover:text-accent cursor-pointer mr-4';
+
     return (
-        <header className="w-full text-gray-600 body-font bg-white shadow-md">
+        <header className="w-full text-gray-600 body-font bg-primary shadow-md"> {/* Cambia bg-white a bg-pink-500 */}
             <div className="w-full flex flex-wrap p-5 flex-col md:flex-row items-center justify-between px-4">
                 <a href="/" className="flex items-center mb-4 md:mb-0">
                     <img src="/public/imagenes/logo.png" alt="Rashel Nails & Spa Logo" className="w-10 h-10" />
@@ -16,12 +19,12 @@ const Navbar = () => {
                     </svg>
                 </button>
                 <nav className={`md:flex md:flex-wrap items-center text-base justify-center ${isOpen ? 'block' : 'hidden'} md:block`}>
-                    <a className={btnLink}>HOME</a>
-                    <a className={btnLink}>SERVICIOS</a>
-                    <a className={btnLink}>GALERIA</a>
-                    <a className={btnLink}>CONTACTO</a>
-                    <a className={btnLink}>OFERTA DEL MES</a>
-                    <a className={btnLink}>RESERVAR ONLINE</a>
+                    <NavLink to="/" className={({isActive}) => isActive ? activeLink : btnLink}>HOME</NavLink>
+                    <NavLink to="Servicios" className={({isActive}) => isActive ? activeLink : btnLink}>SERVICIOS</NavLink>
+                    <NavLink to="Galeria" className={({isActive}) => isActive ? activeLink : btnLink}>GALERIA</NavLink>
+                    <NavLink to="Contacto" className={({isActive}) => isActive ? activeLink : btnLink}>CONTACTO</NavLink>
+                    <NavLink to="Ofertadelmes" className={({isActive}) => isActive ? activeLink : btnLink}>OFERTA DEL MES</NavLink>
+                    <NavLink to="Reservaronline" className={({isActive}) => isActive ? activeLink : btnLink}>RESERVAR ONLINE</NavLink>
                 </nav>
             </div>
         </header>
@@ -29,3 +32,4 @@ const Navbar = () => {
 }
 
 export default Navbar;
+

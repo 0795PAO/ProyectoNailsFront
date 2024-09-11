@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Layaut from "./components/layaut/Layaut";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/Home";
@@ -7,6 +7,7 @@ import Galeria from "./pages/Galeria";
 import Contacto from "./pages/Contacto";
 import Ofertadelmes from "./pages/Ofertadelmes";
 import Reservaonline from "./pages/Reservaronline";
+import Footer from "./components/footer/Footer";
 
 
 function App() {
@@ -22,8 +23,10 @@ function App() {
               <Route path='/Contacto' element={<Contacto></Contacto>}></Route>
               <Route path='/Ofertadelmes' element={<Ofertadelmes></Ofertadelmes>}></Route>
               <Route path='/Reservaronline' element={<Reservaonline></Reservaonline>}></Route>
+              <Route path='*' element={<Navigate to="/"></Navigate>}></Route>
             </Routes>
         </Layaut>
+        <Footer />
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 const Reservaonline = () => {
     return (
-        <div>Reserva</div>
+        <div>Reservaaaaaaaaaa</div>
     )
 }
 
