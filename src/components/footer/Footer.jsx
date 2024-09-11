@@ -6,8 +6,8 @@ const Footer = () => {
             <div className="container mx-auto flex flex-col items-center justify-center">
                 {/* Logo y texto centralizados */}
                 <a href="/" className="flex flex-col items-center mb-4">
-                    <img src="/public/imagenes/logoN.png" alt="Rashel Nails & Spa Logo" className="w-16 h-16" />
-                    <span className="mt-2 text-xl font-semibold text-black">Rashel Nails & Spa</span>
+                    <img src="/public/imagenes/logoN.png" alt="Rashel Nails & Spa Logo" className="w-16 mt-1 h-16" />
+                    <span className="text-xl font-semibold text-black">Rashel Nails & Spa</span>
                 </a>
                 <div className="text-center text-black mb-4">
                     <div className="flex items-center justify-center mb-2">
@@ -22,7 +22,7 @@ const Footer = () => {
                     <div className="flex items-center justify-center mb-2">
                         <p>Horario: Lu-Vi 9:30 am-7:00 pm Sab: 9:30 am-5:00 pm</p>
                     </div>
-                    <div className="flex items-center justify-center mb-2">
+                    <div className="flex items-center  justify-center mb-2">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10a1 1 0 011-1h16a1 1 0 011 1v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4zM12 21a1 1 0 100-2 1 1 0 000 2z" />
                         </svg>

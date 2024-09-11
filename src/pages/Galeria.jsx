@@ -14,12 +14,12 @@ function Galeria() {
                 <p className="text-2xl mb-1  text-center">
                     ¡Bienvenidos a nuestra galería de inspiración! Sumérgete en un mundo de creatividad y belleza mientras exploras nuestra colección.
                 </p>
-<h2 className="sr-only">Products</h2>
+                <h2 className="sr-only">Products</h2>
                 <div className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8 xl:gap-x-19">
                     {products.map((product) => (
                         <div key={product.id} className="group">
                             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-10 xl:aspect-w-7 cursor-pointer" onClick={() => setSelectedImage(product.imageSrc)}>
-                                <img alt=""  src={product.imageSrc}  className="h-full w-full object-cover object-center group-hover:opacity-75" /> 
+                                <img alt="" src={product.imageSrc} className="h-full w-full object-cover object-center group-hover:opacity-75" />
                             </div>
                         </div>
                     ))}

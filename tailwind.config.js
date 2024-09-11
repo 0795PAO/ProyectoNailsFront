@@ -10,8 +10,10 @@ export default {
     extend: {
       colors: {
         'primary': "pink",
-        'secondary': "#5c059b",
+        'secondary': "pink-500",
         'accent': "#CB5930",
+        border: 'hsl(var(--border))', 
+
       },
     },
   },

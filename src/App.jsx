@@ -4,9 +4,8 @@ import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/Home";
 import Servicios from "./pages/Servicios";
 import Galeria from "./pages/Galeria";
-import Contacto from "./pages/Contacto";
 import Ofertadelmes from "./pages/Ofertadelmes";
-import Reservaonline from "./pages/Reservaronline";
+import Reservar from "./pages/Reservaronline";
 import Footer from "./components/footer/Footer";
 
 
@@ -20,9 +19,8 @@ function App() {
               <Route path='/' element={<Home></Home>}></Route>
               <Route path='/Servicios' element={<Servicios></Servicios>}></Route>
               <Route path='/Galeria' element={<Galeria></Galeria>}></Route>
-              <Route path='/Contacto' element={<Contacto></Contacto>}></Route>
               <Route path='/Ofertadelmes' element={<Ofertadelmes></Ofertadelmes>}></Route>
-              <Route path='/Reservaronline' element={<Reservaonline></Reservaonline>}></Route>
+              <Route path='/Reservar' element={<Reservar></Reservar>}></Route>
               <Route path='*' element={<Navigate to="/"></Navigate>}></Route>
             </Routes>
         </Layaut>
