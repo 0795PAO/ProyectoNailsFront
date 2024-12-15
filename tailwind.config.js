@@ -9,10 +9,16 @@ export default {
   threme: {
     extend: {
       colors: {
-        'primary': '#5c059b',
+        'primary': "pink",
+        'secondary': "pink-500",
+        'accent': "#CB5930",
+        border: 'hsl(var(--border))', 
+
       },
     },
   },
-  plugins: [],
+  plugins:  [
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }
 
